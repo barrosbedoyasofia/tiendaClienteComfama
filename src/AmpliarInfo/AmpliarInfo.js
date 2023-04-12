@@ -1,22 +1,27 @@
 import './AmpliarInfo.css'
+import { useLocation } from 'react-router-dom'
 
 export function AmpliarInfo() {
+
+    let location = useLocation()
+    let producto=location.state.producto
+    console.log(producto)
 
     return(
         <>
         <br />
         <br />
-        <div class="container my-5">
-            <div class="row"></div>
+        <div class="container my-5 ">
+            <div class="row">
             <div class="col-12 col-md-7">
-                <img src="https://firebasestorage.googleapis.com/v0/b/bybright-efa55.appspot.com
-                /o/ref1.png?alt=media&token=a2ac6ea7-dbef-4e03-9cd0-68a5af12da73" 
+                <img src= {producto.foto} 
                 class="img-fluid w-75" 
                 alt="foto"
                 />
             </div>
-            <div class="col-12 col-md-5 border p-3 rounded shadow">
-                <h2 class="fw-bold">Buso oversized</h2>
+            <div class="col-12 col-md-5 border p-3 rounded shadow ">
+                <h2 class="fw-bold">{producto.nombre}</h2>
+                <p >{producto.descripcion}</p>
                 <i class="bi bi-star-fill text-warning fs-1 ms-1"></i>
                 <i class="bi bi-star-fill text-warning fs-1 ms-1"></i>
                 <i class="bi bi-star-fill text-warning fs-1 ms-1"></i>
@@ -27,7 +32,7 @@ export function AmpliarInfo() {
                 <span class="badge text-bg-warning mt-3">Más vendido</span> 
                 <br/>
                 <br/>
-                <h1>$70000</h1>
+                <h1>{producto.precio}</h1>
                 <span class="badge text-bg-primary mt-3">Oferton</span> 
                 <br/>
                 <br/>
@@ -40,13 +45,14 @@ export function AmpliarInfo() {
                 <br/>
                 <br/>
                 <form>
-                    <label class="form-label">Cantidad:</label>
+                    <label class="form-label fw-bold">Cantidad:</label>
                     <input class="form-control" type='number' value="1"></input>
                     <button type="submit" class="btn btn-warning mt-2 w-100">
                         <i class="bi bi-cart4">Añadir</i>
                     </button>
 
                 </form>
+            </div>
             </div>
         </div>
         

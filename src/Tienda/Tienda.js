@@ -1,4 +1,5 @@
 import './Tienda.css'
+import { useNavigate } from 'react-router-dom'
 
 export function Tienda() {
 
@@ -10,30 +11,33 @@ export function Tienda() {
         evento.preventDefault()
         evento.target.classList.add("sombra")
     }
+    let navegador = useNavigate()
+    function pasarInformacion(producto) {
+        navegador('/compras',{
+            state: {producto}
+        })
+        
+    }
     
     let productos = [
-        {nombre: "Buso oversized",
-        precio:"70000",
-        descripcion:"Hecho de 80% algodon",
-        foto:"https://firebasestorage.googleapis.com/v0/b/bybright-efa55.appspot.com/o/ref1.png?alt=media&token=a2ac6ea7-dbef-4e03-9cd0-68a5af12da73"
-        },
+        
 
-        {nombre: "Aretes 1",
+        {nombre: "Aretes Butterfly Gold",
         precio:"70000",
         descripcion:"Hecho en colombia",
         foto:"https://firebasestorage.googleapis.com/v0/b/bybright-efa55.appspot.com/o/aretes1.jpeg?alt=media&token=9ada7b5a-0c87-45c0-8db0-74729c809b80"},
 
-        {nombre: "Aretes 2",
+        {nombre: "Aretes Butterfly pink Quartz",
         precio:"60000",
         descripcion:"Hecho en colombia",
         foto:"https://firebasestorage.googleapis.com/v0/b/bybright-efa55.appspot.com/o/aretes2.jpeg?alt=media&token=85773836-2301-4a51-b57d-58d76ed5da23"},
 
-        {nombre: "Aretes 3",
+        {nombre: "Aretes Sunflower",
         precio:"30000",
         descripcion:"Hecho en colombia",
         foto:"https://firebasestorage.googleapis.com/v0/b/bybright-efa55.appspot.com/o/aretes3.jpeg?alt=media&token=e24b46a7-fce2-49c2-af2b-2035605b594b"},
 
-        {nombre: "Aretes 4",
+        {nombre: "Aretes GoldFlower",
         precio:"80000",
         descripcion:"Hecho en colombia",
         foto:"https://firebasestorage.googleapis.com/v0/b/bybright-efa55.appspot.com/o/aretes4.jpeg?alt=media&token=d0cb5a33-25d9-4d39-ab4e-922c9c236592"},
@@ -107,7 +111,7 @@ export function Tienda() {
                 {
                     productos.map(function (producto){
                         return(
-                        <div class="col zoom">
+                        <div class="col zoom" onClick={function(){pasarInformacion(producto)}}>
                             <div class="card shadow h-100 p-2">
                                 <h2 class="fw-bold text-center">{producto.nombre}</h2>
                                 <img src ={producto.foto} alt="foto" class="img-fluid sombra" 
