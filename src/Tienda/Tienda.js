@@ -1,7 +1,11 @@
 import './Tienda.css'
 import { useNavigate } from 'react-router-dom'
-
+import { useEffect, useState } from 'react'
+import { consultarProductos } from '../services/buscarProductos'
 export function Tienda() {
+
+    const[productosTienda, setProductosTienda]=useState("")
+    const[estadocarga, setEstadoCarga] = useState(true)
 
     function cambiarFoto(evento) {
         evento.preventDefault()
@@ -19,7 +23,47 @@ export function Tienda() {
         
     }
     
-    let productos = [
+    useEffect(function() {
+        consultarProductos()
+        .then(function(respuesta) {
+            setEstadoCarga(false)
+            setProductosTienda(respuesta)
+        })
+    },[])
+
+    if(estadocarga==true){
+        return(
+            <>
+                <h1>Estamos Cargando...</h1>
+            </>
+        )
+    }else{
+        return(
+            <>
+                <div class="row row-clos-1 row-cols-md-4 g-3 my-5 p-5">
+                    {
+                        productosTienda.map(function (producto){
+                            return(
+                            <div class="col zoom" onClick={function(){pasarInformacion(producto)}}>
+                                <div class="card shadow h-100 p-2">
+                                    <h2 class="fw-bold text-center">{producto.nombre}</h2>
+                                    <img src ={producto.foto} alt="foto" class="img-fluid sombra" 
+                                    onMouseOver={cambiarFoto} 
+                                    onMouseLeave={cambiarFoto2}/>
+                                    <p class="text-center fw-bold">{producto.descripcion}</p>
+                                    <h3 class="text-success">${producto.precio} COP</h3>
+                                </div>
+                            </div>
+                            )
+                        })
+                    }
+                </div>
+            </>
+        )
+    
+    }
+
+    /*let productos = [
         
 
         {nombre: "Aretes Butterfly Gold",
@@ -103,31 +147,9 @@ export function Tienda() {
         foto:"https://firebasestorage.googleapis.com/v0/b/bybright-efa55.appspot.com/o/manilla1.jpeg?alt=media&token=ed39750f-bbc5-40f7-b6a0-9acc2262ac0e"},
 
 
-    ]
+    ]*/
 
-    return(
-        <>
-            <div class="row row-clos-1 row-cols-md-4 g-3 my-5 p-5">
-                {
-                    productos.map(function (producto){
-                        return(
-                        <div class="col zoom" onClick={function(){pasarInformacion(producto)}}>
-                            <div class="card shadow h-100 p-2">
-                                <h2 class="fw-bold text-center">{producto.nombre}</h2>
-                                <img src ={producto.foto} alt="foto" class="img-fluid sombra" 
-                                onMouseOver={cambiarFoto} 
-                                onMouseLeave={cambiarFoto2}/>
-                                <p class="text-center fw-bold">{producto.descripcion}</p>
-                                <h3 class="text-success">${producto.precio} COP</h3>
-                            </div>
-                        </div>
-                        )
-                    })
-                }
-            </div>
-        </>
-    )
-
+   
 }
 
 

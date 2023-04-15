@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { registrarProductoEnBd } from "../services/agregarProducto"
 export function Administrador(){
     const[nombre, setNombre]=useState("")
     const[foto, setFoto]=useState("")
@@ -19,9 +20,10 @@ function procesarFormulario(evento) {
     evento.preventDefault()
     let datosProducto={
         "nombre":nombre,
-        "foto":foto,
-        "clasificacion":clasificacion,
         "cantidad":cantidad,
+        
+        /*"clasificacion":clasificacion,
+        "foto":foto,
         "precio":precio,
         "peso":peso,
         "volumen":volumen,
@@ -31,9 +33,13 @@ function procesarFormulario(evento) {
         "proveedor":proveedor,
         "fechaingreso":fechaingreso,
         "fechavencimiento":fechavencimiento,
-        "descuento":descuento
+        "descuento":descuento*/
     }
     console.log(datosProducto)
+    registrarProductoEnBd(datosProducto)
+    .then(function(respuesta){
+        console.log(respuesta)
+    })
 }
 
     return(
