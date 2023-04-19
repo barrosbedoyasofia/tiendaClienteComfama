@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2'
 import { useState, useEffect } from "react"
 import { registrarProductoEnBd } from "../services/agregarProducto"
 export function Administrador(){
@@ -38,7 +39,18 @@ function procesarFormulario(evento) {
     console.log(datosProducto)
     registrarProductoEnBd(datosProducto)
     .then(function(respuesta){
-        console.log(respuesta)
+        Swal.fire(
+        'Exito en el registro',
+        'You clicked the button!',
+        'success'
+        )
+    })
+    .catch(function (error) {
+       Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'No pudimos registrar el producto',
+        }) 
     })
 }
 
