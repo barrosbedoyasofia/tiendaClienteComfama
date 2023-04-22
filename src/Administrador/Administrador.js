@@ -60,11 +60,11 @@ function procesarFormulario(evento) {
             <br></br>
             <div class="container-fluid my-5">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-6">
                         <img src="https://firebasestorage.googleapis.com/v0/b/bybright-efa55.appspot.com/o/cl1.jpg?alt=media&token=92c739d5-ab2e-45b1-b17b-e82fee080ec7" 
                         alt="foto" class="image-fluid"></img>
                     </div>
-                    <div class="col-8">
+                    <div class="col-6">
                        <h2>Registro de mercancia</h2>
                         <form class="my-5" onSubmit={procesarFormulario}>
                             <div class="row">
