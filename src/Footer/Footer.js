@@ -39,10 +39,10 @@ export default function App() {
         </section>
 
         <div class="row justify-content-around">
-            <div class="col-4">
+            <div class="col-3">
                 <img class="ancho"src="https://firebasestorage.googleapis.com/v0/b/bybright-efa55.appspot.com/o/LOGO%20ESMERALDA.png?alt=media&token=81327716-0436-4487-9555-90a4417ee115"/>
             </div>
-            <div class="col-3">
+            <div class="col-3 p-14">
                     <h6>Contáctanos</h6>
                     <a>brigthvco11@gmail.com</a>
                     <p>WhatsApp +57 3019907865</p>
@@ -50,13 +50,13 @@ export default function App() {
             <div class="col-3">
                 <h6>Ubicanos en:</h6>
                 <a>Cr 50 #50-50</a>
-                <p>Primer piso.</p>
-                <p>Medellín, Antioquia.</p>
+                <p class="m-0 p-0">Primer piso.</p>
+                <p class="m-0 p-0">Medellín, Antioquia.</p>
             </div>
-            <div class="col-2">
+            <div class="col-3">
                 <h6>Follow us</h6>
                 <a>Instagram</a>
-                <p class="m-0 pd-0">Facebook</p>
+                <p class="m-0 p-0">Facebook</p>
                 <a >Linkedin</a>
                 <p>TikTok</p>
             </div>

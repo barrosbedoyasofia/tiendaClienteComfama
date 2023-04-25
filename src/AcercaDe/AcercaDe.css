@@ -1,0 +1,10 @@
+.banner2{
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/bybright-efa55.appspot.com/o/1.webp?alt=media&token=8eac399a-bb55-4d55-a055-0a0599d3cf4c");
+background-position: top center;
+background-size: cover;
+padding: 25%;
+position: relative;
+z-index: 1;
+color: white;
+background-attachment: fixed;
+}
