@@ -1,5 +1,5 @@
 .banner{
-background-image: url("https://firebasestorage.googleapis.com/v0/b/bybright-efa55.appspot.com/o/1.webp?alt=media&token=8eac399a-bb55-4d55-a055-0a0599d3cf4c");
+background-image: url("https://firebasestorage.googleapis.com/v0/b/bybright-efa55.appspot.com/o/Portada%20%20(1).png?alt=media&token=9d85d7f3-9e7c-4b6e-915f-aa756d4ed995");
 background-position: top center;
 background-size: cover;
 padding: 25%;
@@ -7,9 +7,10 @@ position: relative;
 z-index: 1;
 color: white;
 background-attachment: fixed;
+
 }
 
-.banner::after{
+/*.banner::after{
     content: '';
     position: absolute;
     height: 100%;
@@ -19,4 +20,4 @@ background-attachment: fixed;
     left: 0;
     opacity: 0.5;
     z-index: -1;
-}
+}*/

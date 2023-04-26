@@ -8,7 +8,7 @@ export function Pepe(){
         <>
             <section>
                 <div class="banner">
-                    <h1>Bienvenido...</h1>
+                   
                 </div>
             </section>
             

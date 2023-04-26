@@ -61,8 +61,8 @@ function procesarFormulario(evento) {
             <div class="container-fluid my-5">
                 <div class="row">
                     <div class="col-6">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/bybright-efa55.appspot.com/o/cl1.jpg?alt=media&token=92c739d5-ab2e-45b1-b17b-e82fee080ec7" 
-                        alt="foto" class="image-fluid"></img>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/bybright-efa55.appspot.com/o/Dise%C3%B1o%20sin%20t%C3%ADtulo%20(1).png?alt=media&token=a66da691-73c1-47ea-a88e-092e30651463" 
+                        alt="foto" class="image-fluid w-75 ms-5"></img>
                     </div>
                     <div class="col-6">
                        <h2>Registro de mercancia</h2>
@@ -85,7 +85,7 @@ function procesarFormulario(evento) {
                                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-camera-fill"></i></span>
                                         <input type="text"
                                          class="form-control" 
-                                         placeholder="foto" 
+                                         placeholder="Foto" 
                                          id="foto"
                                          onChange={(evento)=>{
                                             setFoto(evento.target.value);
@@ -97,7 +97,7 @@ function procesarFormulario(evento) {
                                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-card-text"></i></span>
                                             <input type="text" 
                                             class="form-control" 
-                                            placeholder="clasificacion" 
+                                            placeholder="Clasificacion" 
                                             id="clasificacion"
                                             onChange={(evento)=>{
                                                 setClasificacion(evento.target.value);
@@ -114,7 +114,7 @@ function procesarFormulario(evento) {
                                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-123"></i></span>
                                         <input type="number" 
                                         class="form-control" 
-                                        placeholder="cantidad" 
+                                        placeholder="Cantidad" 
                                         id="cantidad"
                                         onChange={(evento)=>{
                                             setCantidad(evento.target.value);
@@ -126,7 +126,7 @@ function procesarFormulario(evento) {
                                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-currency-dollar"></i></span>
                                         <input type="number" 
                                         class="form-control" 
-                                        placeholder="precio" 
+                                        placeholder="Precio" 
                                         id="precio"
                                         onChange={(evento)=>{
                                             setPrecio(evento.target.value);
@@ -138,7 +138,7 @@ function procesarFormulario(evento) {
                                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-box"></i></span>
                                             <input type="number" 
                                             class="form-control" 
-                                            placeholder="peso" 
+                                            placeholder="Peso" 
                                             id="peso"
                                             onChange={(evento)=>{
                                                 setPeso(evento.target.value);
@@ -151,7 +151,7 @@ function procesarFormulario(evento) {
                                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-boxes"></i></span>
                                             <input type="number" 
                                             class="form-control" 
-                                            placeholder="volumen" 
+                                            placeholder="Volumen" 
                                             id="volumen" 
                                             onChange={(evento)=>{
                                                 setVolumen(evento.target.value);
@@ -180,7 +180,7 @@ function procesarFormulario(evento) {
                                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-tags-fill"></i></span>
                                         <input type="text" 
                                         class="form-control" 
-                                        placeholder="marca" 
+                                        placeholder="Marca" 
                                         id="marca"
                                         onChange={(evento)=>{
                                             setMarca(evento.target.value);
@@ -192,7 +192,7 @@ function procesarFormulario(evento) {
                                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-images"></i></span>
                                         <input type="text" 
                                         class="form-control" 
-                                        placeholder="presentacion" 
+                                        placeholder="Presentacion" 
                                         id="presentacion"
                                         onChange={(evento)=>{
                                             setPresentacion(evento.target.value);
@@ -204,7 +204,7 @@ function procesarFormulario(evento) {
                                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-bus-front-fill"></i></span>
                                             <input type="text" 
                                             class="form-control" 
-                                            placeholder="proveedor" 
+                                            placeholder="Proveedor" 
                                             id="proveedor" 
                                             onChange={(evento)=>{
                                                 setProveedor(evento.target.value);
@@ -219,7 +219,7 @@ function procesarFormulario(evento) {
                                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-box-arrow-in-right"></i></span>
                                         <input type="text" 
                                         class="form-control" 
-                                        placeholder="fecha ingreso" 
+                                        placeholder="Fecha ingreso" 
                                         id="fechaingreso" 
                                         onChange={(evento)=>{
                                             setFechaiIngreso(evento.target.value);
@@ -231,7 +231,7 @@ function procesarFormulario(evento) {
                                         <span class="input-group-text" id="basic-addon1"><i class="bi bi-box-arrow-left"></i></span>
                                         <input type="text" 
                                         class="form-control" 
-                                        placeholder="fecha vencimiento" 
+                                        placeholder="Fecha vencimiento" 
                                         id="fechavencimiento"
                                         onChange={(evento)=>{
                                             setFechaVencimiento(evento.target.value);
@@ -243,7 +243,7 @@ function procesarFormulario(evento) {
                                             <span class="input-group-text" id="basic-addon1"><i class="bi bi-graph-down-arrow"></i></span>
                                             <input type="text" 
                                             class="form-control" 
-                                            placeholder="descuento" 
+                                            placeholder="Descuento" 
                                             id="descuento"
                                             onChange={(evento)=>{
                                                 setDescuento(evento.target.value);
